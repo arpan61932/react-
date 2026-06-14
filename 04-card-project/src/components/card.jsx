@@ -7,37 +7,30 @@ const card = (props) => {
     <div className="card">
         <div>
           <div className="top">
-          <img src="https://thumbs.dreamstime.com/b/amazon-logo-editorial-illustrative-white-background-eps-download-vector-jpeg-banner-ai-amazon-logo-editorial-illustrative-208329107.jpg" alt="" />
-          <button >
-            Save<Bookmark  size={13}/>
-          </button>
-        </div>
-
-        <div className="center">
-          <h3>Amazon <span> 5 days ago</span></h3>
-          <h2>Senior UX Designer</h2>
-          <div className="tag">
-            <h4>Part Time</h4>
-            <h4>Senior Level</h4>
+            <img src={props.brandLogo} alt={props.companyName} />
+            <button>
+              Save<Bookmark size={13} />
+            </button>
           </div>
 
-        </div>
+          <div className="center">
+            <h3>{props.companyName} <span>{props.datePosted}</span></h3>
+            <h2>{props.post}</h2>
+            <div className="tag">
+              <h4>{props.tag1}</h4>
+              <h4>{props.tag2}</h4>
+            </div>
+          </div>
         </div>
         <div className="bottom">
           <div>
-            
-              <h3>
-                120$/hr
-              </h3>
-              <p>Mumbai,india</p>
-            
-             
-          
-        </div>
-        <button>
-              Apply Now
-             </button>
+            <h3>{props.pay}</h3>
+            <p>{props.location}</p>
           </div>
+          <button>
+            Apply Now
+          </button>
+        </div>
       </div>
   )
 }
